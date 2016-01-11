@@ -1,0 +1,124 @@
+// Place all the styles related to the Chords controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// will go in variables.scss
+//color vars
+$string-color: #d59352;
+$fretboard-color: #333330;
+$fretbar-color: #A57164;
+$nut-color: #FBF3D3;
+$shadow-color: #151515;
+
+//sizing vars
+$fretbar-height: 5px;
+$fret-row-height: 50px;
+$nut-height: 20px;
+$note-width: 40px;
+$string-width: 1px;
+$input-area-width: 3%;
+
+.fretboard {
+  // display: inline-block;
+  border-top-width: $nut-height;
+  border-top-style: solid;
+  border-top-color: $nut-color;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0px 0px 1px 2px $shadow-color;
+  background-color: $fretboard-color;
+  width: 35%;
+  float:left;
+}
+
+.fret-row{
+  text-align: center;
+  border-bottom: 4px solid black;
+  display: flex;
+  height: $fret-row-height;
+  border-bottom: $fretbar-height solid $fretbar-color;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  .note {
+   border: 1px solid white;
+    background: white;
+   height: 20px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+   width: 20px;
+   display: inline-block;
+}
+
+}
+
+.fret{
+  display:block;
+  width: 100%;
+  border-bottom: 2px solid $fretbar-color;
+  margin: 0;
+}
+
+div{
+  float:left;
+  margin: $input-area-width;
+}
+
+.here:after {
+content:"";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 2px dotted #ff0000;
+}
+.guitar-neck{
+  display: block;
+  width: 100%;
+}
+
+
+
+label{
+  border: 1px solid rgba(255,255,255, .2);
+	height: 20px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+  width: 20px;
+  display: inline-block;
+}
+
+input{
+  display:none;
+}
+
+:checked + label{
+ background-color: orange;
+
+}
+
+
+
+
+
+
+
+@mixin string($string-width){
+  display: block;
+  position: relative;
+  background-color: $string-color;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: $string-width;
+  height: $fret-row-height + $fretbar-height;
+}
+
+// wrapper around whole neck
+.wrapper {
+  position: relative;
+  width: 94.2%;
+  float: left;
+  margin-left: 4px;
+}

@@ -14,3 +14,43 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+console.log("haaaay")
+$( document ).ready(function() {
+  var strings = ["E", "A", "D", "G", "B", "e"];
+  var frets = 14;
+
+
+  for(var f = 0; f < frets; f++) {
+    // create a new row that will represent this fret level
+    var $fret = $("<div class='fret' data-fret='"+f+"'/>");
+
+    for (i = 0; i < strings.length; i++) {
+      var $div = $("<div/>");
+      var $input = $("<input type='checkbox'>");
+      $input.attr("data-string", strings[i]);
+      // use f as the fret number
+      $input.attr("data-fret", f);
+      // set id to strings[i]+fret num
+      var id = strings[i] + f;
+      $input.attr("id", id);
+      $div.append($input);
+      // use id again to set 'for' equal to id
+      var $label = $("<label for='"+id+"'></label>");
+      $div.append($input);
+      $div.append($label);
+      $fret.append($div); // add to the fret, not the fretboard
+
+    }
+  console.log("here");
+    // done creating the row, now append that to the fretboard
+    $('.fretboard').append($fret);
+  }
+
+  //function for barre chords
+  //for every input-type = data-string E, change input to X
+  $('.Estring').on("click", function(){
+    console.log ($("[data-string='E'] [label]"));
+
+  })
+});
