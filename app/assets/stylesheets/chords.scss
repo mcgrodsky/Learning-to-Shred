@@ -89,16 +89,22 @@ label{
   display: inline-block;
 }
 
-input{
-  display:none;
-}
+// input{
+//   display:none;
+// }
 
 :checked + label{
  background-color: orange;
 
 }
 
-
+.fret{
+  div{
+    input{
+      display:none;
+    }
+  }
+}
 
 
 
