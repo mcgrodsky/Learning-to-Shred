@@ -15,6 +15,7 @@ class ChordsController < ApplicationController
   # GET /chords/new
   def new
     @chord = Chord.new
+    @chords = Chord.all
   end
 
   # GET /chords/1/edit
