@@ -102,10 +102,10 @@ $(document).ready(function() {
   // initialize
   showSelected();
 
-  //clear notes being pressed, clear #selected div
+  //clear fretboard and #selected input on click
 $('.clear-fretboard').on("click", function(){
   $('.fretboard input:checked').removeAttr('checked');
-  $('#selected').empty();
+  $('#selected').val('');
 })
 
 // list the notes in a chord represented by a button element
