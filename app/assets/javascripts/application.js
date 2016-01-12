@@ -81,6 +81,7 @@ $(document).ready(function() {
     var sel = getSelected();
     $("#selected").val(sel.length?"'"+sel.join("' '")+"'":'');
   }
+
   function getSelected() {
     // get the array of notes being pressed. array is ids of selected notes
     //can use var sel to push into database perhaps?
@@ -91,6 +92,7 @@ $(document).ready(function() {
     });
     return sel;
   }
+
   function clearOthersInRow(selected) {
     // ensure that `selected` is the only note being pressed on this string
     var s = $(selected).attr('data-string');
@@ -100,10 +102,10 @@ $(document).ready(function() {
   // initialize
   showSelected();
 
-  //clear notes being pressed
-  //find all class selected, remove
+  //clear notes being pressed, clear #selected div
 $('.clear-fretboard').on("click", function(){
   $('.fretboard input:checked').removeAttr('checked');
+  $('#selected').empty();
 })
 
 // list the notes in a chord represented by a button element
@@ -114,6 +116,7 @@ $('.clear-fretboard').on("click", function(){
     D: ['D0','G2','b3','e2'],
     D_bar: ['A5','D7','G7','b7','e5'],
     A: ['e0','A0','b2','G2','D2'],
-    D7: ['G1', 'b2', 'e1']
+    D7: ['G1', 'b2', 'e1'],
+    G: ['E3', 'A2', 'e3']
   }
 });
