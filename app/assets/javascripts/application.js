@@ -80,6 +80,8 @@ $(document).ready(function() {
     // output a list of strings being pressed
     var sel = getSelected();
     $("#selected").val(sel.length?"'"+sel.join("' '")+"'":'');
+    // var JSONchord = JSON.stringify(sel);
+    // sendToDatabaseUsingAJAX( JSONchord );
   }
 
   function getSelected() {
