@@ -17,21 +17,21 @@
 
 $(document).ready(function() {
   var strings = ["e", "b", "G", "D", "A", "E"];
-  var dots = [3,5,7,9,15,17];
+  var dots = [3, 5, 7, 9, 15, 17];
   var doubleDots = 12;
   var nextDot = dots.shift();
   var frets = 15;
 
-  for(var f = 0; f < frets; f++) {
+  for (var f = 0; f < frets; f++) {
     // create a new row that will represent this fret level
-    var $fret = $("<div class='fret' data-fret='"+f+"'/>");
+    var $fret = $("<div class='fret' data-fret='" + f + "'/>");
 
     for (i = 0; i < strings.length; i++) {
       // set id to strings[i]+fret num
       var id = strings[i] + f;
       var $div = $("<div class='note'/>");
       $div.attr('data-string', strings[i]);
-      var $input = $("<input type='checkbox' title='"+id+"'>");
+      var $input = $("<input type='checkbox' title='" + id + "'>");
       $input.attr("data-string", strings[i]);
       // use f as the fret number
       $input.attr("data-fret", f);
@@ -39,15 +39,14 @@ $(document).ready(function() {
       $div.append($input);
 
       // use id again to match label with input
-      var $label = $("<label for='"+id+"'></label>");
+      var $label = $("<label for='" + id + "'></label>");
       $div.append($input);
       $div.append($label);
       $fret.append($div); // add to the FRET, not the fretboard
     }
-    if(f === doubleDots) {
+    if (f === doubleDots) {
       $fret.addClass('two-dots');
-    }
-    else if(f === nextDot) {
+    } else if (f === nextDot) {
       nextDot = dots.shift();
       $fret.addClass('dot');
     }
@@ -55,15 +54,15 @@ $(document).ready(function() {
     $('.fretboard').append($fret);
   }
 
-  $(".sel-button").on('click', function(e){
+  $(".sel-button").on('click', function(e) {
     e.preventDefault();
     // when a button is clicked, show which notes are pressed for that chord
     var chord = chords[$(this).attr('data-chord')];
-    if(chord){
+    if (chord) {
       //prop gets property value for first element in matched set
       $(".fretboard input").prop('checked', false);
-      for(var i=0; i < chord.length; i++) {
-        $(".fretboard input#"+chord[i]).prop('checked', true);
+      for (var i = 0; i < chord.length; i++) {
+        $(".fretboard input#" + chord[i]).prop('checked', true);
       }
     }
     showSelected();
@@ -79,9 +78,7 @@ $(document).ready(function() {
   function showSelected() {
     // output a list of strings being pressed
     var sel = getSelected();
-    $("#selected").val(sel.length?"'"+sel.join("' '")+"'":'');
-    // var JSONchord = JSON.stringify(sel);
-    // sendToDatabaseUsingAJAX( JSONchord );
+    $("#selected").val(sel.length ? "'" + sel.join("', '") + "'" : '');
   }
 
   function getSelected() {
@@ -89,7 +86,7 @@ $(document).ready(function() {
     //can use var sel to push into database perhaps?
     //store the value of selected in this array, and save array to another array that creates a new instance?
     var sel = [];
-    $('.fretboard input:checked').each(function () {
+    $('.fretboard input:checked').each(function() {
       sel.push($(this).attr('id'));
     });
     return sel;
@@ -98,26 +95,25 @@ $(document).ready(function() {
   function clearOthersInRow(selected) {
     // ensure that `selected` is the only note being pressed on this string
     var s = $(selected).attr('data-string');
-    $('.fretboard div[data-string="'+s+'"] input')
-        .not(selected).prop('checked', false);
+    $('.fretboard div[data-string="' + s + '"] input')
+      .not(selected).prop('checked', false);
   }
   // initialize
   showSelected();
 
   //clear fretboard and #selected input on click
-$('.clear-fretboard').on("click", function(){
-  $('.fretboard input:checked').removeAttr('checked');
-  $('#selected').val('');
-})
+  $('.clear-fretboard').on("click", function() {
+    $('.fretboard input:checked').removeAttr('checked');
+    $('#selected').val('');
+  })
 
-// list the notes in a chord represented by a button element
-//would be cool to eventually have this as an API populating the fretboard versus hardcoding
+  // list the notes in a chord represented by a button element
   var chords = {
-    E: ['E0','A2','D2','G1','b0','e0'],
-    Em: ['E0','A2','D2','G0','b0','e0'],
-    D: ['D0','G2','b3','e2'],
-    D_bar: ['A5','D7','G7','b7','e5'],
-    A: ['e0','A0','b2','G2','D2'],
+    E: ['E0', 'A2', 'D2', 'G1', 'b0', 'e0'],
+    Em: ['E0', 'A2', 'D2', 'G0', 'b0', 'e0'],
+    D: ['D0', 'G2', 'b3', 'e2'],
+    D_bar: ['A5', 'D7', 'G7', 'b7', 'e5'],
+    A: ['e0', 'A0', 'b2', 'G2', 'D2'],
     D7: ['G1', 'b2', 'e1'],
     G: ['E3', 'A2', 'e3']
   }
