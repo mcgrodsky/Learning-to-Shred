@@ -3,6 +3,86 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // will go in variables.scss
 // color vars
+$string-color: #d59352;
+$fretboard-color: #333330;
+$fretbar-color: #A57164;
+$nut-color: #FBF3D3;
+$shadow-color: #151515;
+$text-color: white;
+
+
+.fretboard {
+  margin-bottom: 10px;
+  border: 1px solid red;
+  background: $fretboard-color;
+}
+
+.fret-row{
+  float:left;
+  background: fretbar-color;
+  color: $text-color;
+  margin: 0;
+  font-size: 15px;
+  .note{
+    padding: 7px 6px 5px 0;
+
+  }
+}
+.fret {
+  display: inline-block;
+  border-right: 2px solid orange;
+  padding: 0 .2em;
+}
+.fret:hover {
+  background-color: #efefef;
+}
+.fret[data-fret="0"] {
+  border-right: 3px solid black;
+  background-color: $fretbar-color;
+}
+button {
+  display: block;
+}
+.fret.dot {
+  border-bottom: 2px dotted gray;
+  // background-color: #eeeeee;
+}
+.fret.two-dots {
+  border-bottom: 2px dashed gray;
+  // background-color: #dddddd;
+}
+
+
+label{
+  border: 1px solid rgba(255,255,255, .2);
+	height: 20px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+  width: 20px;
+  display: inline-block;
+  margin: .2em;
+}
+
+// input{
+//   display:none;
+// }
+
+:checked + label{
+ background-color: orange;
+
+}
+
+input{
+  display:none;
+}
+
+
+
+
+
+// will go in variables.scss
+// color vars
 // $string-color: #d59352;
 // $fretboard-color: #333330;
 // $fretbar-color: #A57164;
@@ -46,6 +126,7 @@
 //     -moz-border-radius: 50px;
 //     -webkit-border-radius: 50px;
 //    width: 20px;
+//
 //    display: inline-block;
 // }
 //
@@ -105,11 +186,11 @@
 //     }
 //   }
 // }
-
-
-
-
-// 
+//
+//
+//
+//
+//
 // @mixin string($string-width){
 //   display: block;
 //   position: relative;
@@ -120,39 +201,39 @@
 //   width: $string-width;
 //   height: $fret-row-height + $fretbar-height;
 // }
-
-// wrapper around whole neck
-.wrapper {
-  position: relative;
-  width: 94.2%;
-  float: left;
-  margin-left: 4px;
-}
-
-.fretboard {
-  margin-bottom: 10px;
-}
-.fret {
-  display: inline-block;
-}
-.fret:hover {
-  background-color: #efefef;
-}
-.fret[data-fret="0"] {
-  border-right: 2px solid black;
-  background-color: #cccccc;
-}
-button {
-  display: block;
-}
-.fret.dot {
-  border-bottom: 2px dotted gray;
-  background-color: #eeeeee;
-}
-.fret.two-dots {
-  border-bottom: 2px dashed gray;
-  background-color: #dddddd;
-}
-#selected {
-
-}
+//
+// // wrapper around whole neck
+// .wrapper {
+//   position: relative;
+//   width: 94.2%;
+//   float: left;
+//   margin-left: 4px;
+// }
+//
+// .fretboard {
+//   margin-bottom: 10px;
+// }
+// .fret {
+//   display: inline-block;
+// }
+// .fret:hover {
+//   background-color: #efefef;
+// }
+// .fret[data-fret="0"] {
+//   border-right: 2px solid black;
+//   background-color: #cccccc;
+// }
+// button {
+//   display: block;
+// }
+// .fret.dot {
+//   border-bottom: 2px dotted gray;
+//   background-color: #eeeeee;
+// }
+// .fret.two-dots {
+//   border-bottom: 2px dashed gray;
+//   background-color: #dddddd;
+// }
+// #selected {
+//
+// }
