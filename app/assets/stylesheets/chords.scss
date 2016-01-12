@@ -10,12 +10,16 @@ $nut-color: #FBF3D3;
 $shadow-color: #151515;
 $text-color: white;
 
-
 .fretboard {
   margin-bottom: 10px;
   background: $fretboard-color;
   width: 60%;
   border-radius: 20px;
+  min-width: 50%;
+  input{
+    display: none;
+  }
+
 }
 
 .fret-row{
@@ -26,6 +30,7 @@ $text-color: white;
   font-size: 15px;
   .note{
     padding: 7px 6px 5px 0;
+
 
   }
 }
@@ -38,7 +43,7 @@ $text-color: white;
   background-color: lighten($fretboard-color, 20%);
 }
 .fret[data-fret="0"] {
-  border-right: 3px solid black;
+  border-right: 5px solid orange;
   background-color: $fretbar-color;
 }
 button {
@@ -65,19 +70,12 @@ label{
   margin: .2em;
 }
 
-// input{
-//   display:none;
-// }
+
 
 :checked + label{
  background-color: orange;
 
 }
-
-input{
-  display:none;
-}
-
 
 
 
