@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
-console.log("haaaay")
 $( document ).ready(function() {
   var strings = ["e", "b", "G", "D", "A", "E"];
   var dots = [3,5,7,9,15,17];
@@ -39,7 +38,7 @@ $( document ).ready(function() {
       $input.attr("id", id);
       $div.append($input);
 
-      // use id again
+      // use id again to match label with input
       var $label = $("<label for='"+id+"'></label>");
 
       $div.append($input);
@@ -60,14 +59,7 @@ $( document ).ready(function() {
     $('.fretboard').append($fret);
   }
 
-  // list the notes in a chord represented by a button element
-  var chords = {
-    E: ['E0','A2','D2','G1','b0','e0'],
-    Em: ['E0','A2','D2','G0','b0','e0'],
-    D: ['D0','G2','b3','e2'],
-    D_bar: ['A5','D7','G7','b7','e5'],
-    A: ['e0','A0','b2','G2','D2']
-  }
+
 
   $("button").on('click', function (e) {
     // when a button is clicked, show which notes are pressed for that chord
@@ -108,6 +100,16 @@ $( document ).ready(function() {
   // initialize
   showSelected();
 
+
+// list the notes in a chord represented by a button element - shows user how app works
+  var chords = {
+    E: ['E0','A2','D2','G1','b0','e0'],
+    Em: ['E0','A2','D2','G0','b0','e0'],
+    D: ['D0','G2','b3','e2'],
+    D_bar: ['A5','D7','G7','b7','e5'],
+    A: ['e0','A0','b2','G2','D2'],
+    D7: ['G1', 'b2', 'e1']
+  }
 });
 
 
