@@ -29,7 +29,7 @@ class ChordDiagramsController < ApplicationController
 
     respond_to do |format|
       if @chord_diagram.save
-        format.html { redirect_to @chord_diagram, notice: 'Chord diagram was successfully created.' }
+        format.html { redirect_to new_chord_diagram_url, notice: 'Chord Diagram was successfully created.' }
         format.json { render :show, status: :created, location: @chord_diagram }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class ChordDiagramsController < ApplicationController
   def update
     respond_to do |format|
       if @chord_diagram.update(chord_diagram_params)
-        format.html { redirect_to @chord_diagram, notice: 'Chord diagram was successfully updated.' }
+        format.html { redirect_to new_chord_diagram_url, notice: 'Chord diagram was successfully updated.' }
         format.json { render :show, status: :ok, location: @chord_diagram }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class ChordDiagramsController < ApplicationController
   def destroy
     @chord_diagram.destroy
     respond_to do |format|
-      format.html { redirect_to chord_diagrams_url, notice: 'Chord diagram was successfully destroyed.' }
+      format.html { redirect_to new_chord_diagram_url, notice: 'Chord diagram was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
