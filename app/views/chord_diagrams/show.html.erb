@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chord_diagram.name %>
+</p>
+
+<p>
+  <strong>Chords:</strong>
+  <%= @chord_diagram.chords %>
+</p>
+
+<%= link_to 'Edit', edit_chord_diagram_path(@chord_diagram) %> |
+<%= link_to 'Back', chord_diagrams_path %>
