@@ -1,6 +1,8 @@
 // Place all the styles related to the ChordDiagrams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
 $susy: (
   columns: 12, /* we want our page to have 12 columns */
   gutters: 3/4, /* space between columns with be 3/4 of a column */
@@ -35,8 +37,8 @@ body{
   input{
     display: none;
   }
-
 }
+
 
 .fret-row{
   float:left;
@@ -60,13 +62,6 @@ body{
 .fret[data-fret="0"] {
   border-right: 5px solid orange;
   background-color: $fretbar-color;
-}
-
-
-.generate-chord-button{
-  input{
-
-  }
 }
 
 //refactor - add together
@@ -113,5 +108,10 @@ label{
     font-size: 20px;
     letter-spacing: 2px;
 
+
+  }
+  .new-chord-form-button:hover{
+    background: $fretbar-color;
+    cursor: pointer;
   }
 }

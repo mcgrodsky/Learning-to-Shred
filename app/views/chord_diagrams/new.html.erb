@@ -15,31 +15,21 @@
     </ul>
   </div>
 
-<div class = "hardcoded-chords">
-  <button class = "sel-button" data-chord="E">E Major</button>
-  <button class = "sel-button"data-chord="Em">E minor</button>
-  <button class = "sel-button"data-chord="D">D Major</button>
-  <button class = "sel-button"data-chord="D_bar">D Major, bar chord</button>
-  <button class = "sel-button"data-chord="A">A Major</button>
-  <button class = "sel-button"data-chord="D7">D7</button>
-  <button class = "sel-button"data-chord="G">G Major</button>
-</div>
-
-
-
 <table>
   <thead>
     <tr>
       <th>Name</th>
-      <th>Chords</th>
     </tr>
   </thead>
 
   <tbody>
     <% @chord_diagrams.each do |chord_diagram| %>
       <tr>
-        <button class = "user-created-chord"><%= chord_diagram.name %></button>
-        <td class = "user-sel-chord"><%= chord_diagram.chords %></td>
+
+        <td class = "user-sel-chord">
+        <button class="sel-button" data-chord="<%= chord_diagram.chords.gsub(/[\s']/,'')%>"><%= chord_diagram.name %>
+        </button>
+        <!-- <%= chord_diagram.chords %></td> -->
         <!-- <td><%= link_to 'Show', chord_diagram %></td> -->
         <td><%= link_to 'Edit', edit_chord_diagram_path(chord_diagram) %></td>
         <td><%= link_to 'Destroy', chord_diagram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
