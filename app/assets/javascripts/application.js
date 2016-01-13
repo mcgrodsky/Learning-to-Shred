@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 $(document).ready(function() {
+
   var strings = ["e", "b", "G", "D", "A", "E"];
   var dots = [3, 5, 7, 9, 15, 17];
   var doubleDots = 12;
@@ -57,9 +57,8 @@ $(document).ready(function() {
   $(".sel-button").on('click', function(e) {
     e.preventDefault();
     // when a button is clicked, show which notes are pressed for that chord
-    var chord = chords[$(this).attr('data-chord')];
+    var chord = $(this).attr('data-chord').split(",");
     if (chord) {
-      //prop gets property value for first element in matched set
       $(".fretboard input").prop('checked', false);
       for (var i = 0; i < chord.length; i++) {
         $(".fretboard input#" + chord[i]).prop('checked', true);
@@ -109,14 +108,4 @@ $(document).ready(function() {
 
 
 
-  // listing the notes in a chord represented by a button element
-  var chords = {
-    E: ['E0', 'A2', 'D2', 'G1', 'b0', 'e0'],
-    Em: ['E0', 'A2', 'D2', 'G0', 'b0', 'e0'],
-    D: ['D0', 'G2', 'b3', 'e2'],
-    D_bar: ['A5', 'D7', 'G7', 'b7', 'e5'],
-    A: ['e0', 'A0', 'b2', 'G2', 'D2'],
-    D7: ['G1', 'b2', 'e1'],
-    G: ['E3', 'A2', 'e3']
-  }
 });
