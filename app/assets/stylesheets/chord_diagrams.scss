@@ -56,9 +56,7 @@ body{
   border-right: 5px solid orange;
   background-color: $fretbar-color;
 }
-button {
-  display: block;
-}
+
 
 .generate-chord-button{
   input{
@@ -100,14 +98,13 @@ label{
 }
 
 .new-chord-form{
-  margin: 0 auto;
-  width:20%;
 
   .new-chord-form-button{
-    background:purple;
-    
+    background: darken($fretbar-color, 20%);
+    border-radius: 10px;
+    color: $text-color;
+    font-size: 20px;
+    letter-spacing: 2px;
+
   }
-}
-.hardcoded-chords{
-  float:left;
 }
