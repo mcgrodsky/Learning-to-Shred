@@ -38,8 +38,8 @@
   <tbody>
     <% @chord_diagrams.each do |chord_diagram| %>
       <tr>
-        <td><%= chord_diagram.name %></td>
-        <td><%= chord_diagram.chords %></td>
+        <button class = "user-created-chord"><%= chord_diagram.name %></button>
+        <td class = "user-sel-chord"><%= chord_diagram.chords %></td>
         <!-- <td><%= link_to 'Show', chord_diagram %></td> -->
         <td><%= link_to 'Edit', edit_chord_diagram_path(chord_diagram) %></td>
         <td><%= link_to 'Destroy', chord_diagram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
