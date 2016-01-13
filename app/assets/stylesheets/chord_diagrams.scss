@@ -16,9 +16,10 @@ $fretbar-color: #A57164;
 $nut-color: #FBF3D3;
 $shadow-color: #151515;
 $text-color: white;
+$background-color: #F5DeB3;
 
 body{
-  background: wheat;
+  background: $background-color;
 }
 .fretboard {
   margin-bottom: 10px;
@@ -27,6 +28,10 @@ body{
   border-radius: 20px;
   min-width: 50%;
   margin: 0 auto;
+  border: 3px solid darken($background-color, 60%);
+  -webkit-box-shadow: -2px 0px 13px 5px rgba(194,163,107,1);
+  -moz-box-shadow: -2px 0px 13px 5px rgba(194,163,107,1);
+  box-shadow: -2px 0px 13px 5px rgba(194,163,107,1);
   input{
     display: none;
   }
@@ -67,12 +72,14 @@ body{
 //refactor - add together
 .fret.dot {
   margin-top: 3px;
-  border-bottom: 2px dotted gray;
+  border-bottom: 3px dotted $text-color;
+  padding: 5px;
   // background-color: #eeeeee;
   }
 
 .fret.two-dots {
-  border-bottom: 2px dashed gray;
+  border-bottom: 3px dashed $text-color;
+  padding: 5px;
   // background-color: #dddddd;
 }
 

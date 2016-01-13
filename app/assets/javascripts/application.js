@@ -16,6 +16,7 @@
 //= require_tree .
 
 $(document).ready(function() {
+
   var strings = ["e", "b", "G", "D", "A", "E"];
   var dots = [3, 5, 7, 9, 15, 17];
   var doubleDots = 12;
