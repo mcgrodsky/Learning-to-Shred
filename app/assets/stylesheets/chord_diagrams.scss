@@ -17,6 +17,9 @@ $nut-color: #FBF3D3;
 $shadow-color: #151515;
 $text-color: white;
 
+body{
+  background: wheat;
+}
 .fretboard {
   margin-bottom: 10px;
   background: $fretboard-color;
@@ -31,10 +34,12 @@ $text-color: white;
 
 .fret-row{
   float:left;
-  background: fretbar-color;
   color: $text-color;
-  margin: 0;
-  font-size: 15px;
+  margin: 2px;
+  border-radius: 10px;
+  font-size: 18px;
+  
+  padding: 1px 0 5px 20px;
   .note{
     padding: 7px 6px 5px 0;
   }
