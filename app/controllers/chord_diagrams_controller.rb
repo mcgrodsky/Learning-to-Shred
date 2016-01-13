@@ -15,6 +15,7 @@ class ChordDiagramsController < ApplicationController
   # GET /chord_diagrams/new
   def new
     @chord_diagram = ChordDiagram.new
+    @chord_diagrams = ChordDiagram.all
   end
 
   # GET /chord_diagrams/1/edit
