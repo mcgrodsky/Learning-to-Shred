@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field chord-name-input">
-    <%= f.label :name %>
+    <!-- <%= f.label :name %><br> -->
     <%= f.text_field :name %>
   </div>
   <div class="field">
@@ -20,6 +20,6 @@
     <%= f.text_field :chords, id: "selected"%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class:"new-chord-form-button" %>
   </div>
 <% end %>

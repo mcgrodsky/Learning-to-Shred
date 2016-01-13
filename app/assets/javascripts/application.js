@@ -107,6 +107,8 @@ $(document).ready(function() {
     $('#selected').val('');
   })
 
+
+
   // listing the notes in a chord represented by a button element
   var chords = {
     E: ['E0', 'A2', 'D2', 'G1', 'b0', 'e0'],

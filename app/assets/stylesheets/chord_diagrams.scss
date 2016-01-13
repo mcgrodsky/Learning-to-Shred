@@ -99,9 +99,14 @@ label{
   display:none;
 }
 
-.chord-name-input{
+.new-chord-form{
   margin: 0 auto;
-  width: 10%;
+  width:20%;
+
+  .new-chord-form-button{
+    background:purple;
+    
+  }
 }
 .hardcoded-chords{
   float:left;
