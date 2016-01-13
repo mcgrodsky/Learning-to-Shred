@@ -1,6 +1,18 @@
-<h1>Editing Chord Diagram</h1>
+<h2>Edit Chord Diagram</h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @chord_diagram %> |
-<%= link_to 'Back', chord_diagrams_path %>
+<button class = "clear-fretboard">Clear Fretboard</button>
+
+<ul class="fret-row">
+  <div class="note estring">e</div>
+  <div class="note Bstring">b</div>
+  <div class="note Gstring">G</div>
+  <div class="note Astring">D</div>
+  <div class="note Dstring">A</div>
+  <div class="note EString">E</div>
+</ul>
+  <div class="fretboard">
+
+<!-- <%= link_to 'Show', @chord_diagram %> |
+<%= link_to 'Back', chord_diagrams_path %> -->
