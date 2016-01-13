@@ -98,16 +98,16 @@ $(document).ready(function() {
     $('.fretboard div[data-string="' + s + '"] input')
       .not(selected).prop('checked', false);
   }
-  // initialize
+  // initialize selected notes
   showSelected();
 
-  //clear fretboard and #selected input on click
+  //clear fretboard and input values on click
   $('.clear-fretboard').on("click", function() {
     $('.fretboard input:checked').removeAttr('checked');
     $('#selected').val('');
   })
 
-  // list the notes in a chord represented by a button element
+  // listing the notes in a chord represented by a button element
   var chords = {
     E: ['E0', 'A2', 'D2', 'G1', 'b0', 'e0'],
     Em: ['E0', 'A2', 'D2', 'G0', 'b0', 'e0'],
