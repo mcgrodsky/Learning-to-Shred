@@ -36,6 +36,7 @@
  <thead>
    <tr>
      <th>Chord Name</th>
+     <th> Chord Notes </th>
      <th colspan="3"></th>
    </tr>
  </thead>
@@ -44,6 +45,7 @@
     <% @chords.each do |chord| %>
       <tr>
         <td><%= chord.title %></td>
+        <td><%= chord.notes %></td>
         <td><%= link_to 'Show', chord %></td>
         <td><%= link_to 'Edit', edit_chord_path(chord) %></td>
         <td><%= link_to 'Destroy', chord, method: :delete, data: { confirm: 'Are you sure?' } %></td>
