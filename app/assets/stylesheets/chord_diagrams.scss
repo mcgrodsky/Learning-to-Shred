@@ -24,6 +24,9 @@ body{
   background: $background-color;
 }
 
+h2{
+  color: $text-color;
+}
 .fretboard {
   margin-bottom: 10px;
   background: $fretboard-color;
@@ -127,4 +130,9 @@ label:hover{
   height: 30px;
   font-size: 20px;
   text-align: center;
+}
+
+img{
+  border: 3px solid $text-color;
+  border-radius: 5px;
 }

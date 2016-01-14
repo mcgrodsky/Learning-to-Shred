@@ -20,7 +20,7 @@ $(document).ready(function() {
   var dots = [3, 5, 7, 9, 15, 17];
   var doubleDots = 12;
   var nextDot = dots.shift();
-  var frets = 15;
+  var frets = 18;
 
   for (var f = 0; f < frets; f++) {
     // create a new row that will represent this fret level

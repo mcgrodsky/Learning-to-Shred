@@ -10,16 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+<div class ="column column-12">
   <div class="field chord-name-input">
     <!-- <%= f.label :name %><br> -->
     <%= f.text_field :name %>
   </div>
   <div class="field">
     <!-- <%= f.label :chords %><br> -->
-    <%= f.text_field :chords, id: "selected"%>
+    <%= f.text_field :chords, id: "selected", required: true  %>
   </div>
   <div class="actions">
     <%= f.submit class:"new-chord-form-button"  %>
   </div>
+</div>
 <% end %>
