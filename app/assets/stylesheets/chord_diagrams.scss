@@ -23,6 +23,7 @@ $background-color: #F5DeB3;
 body{
   background: $background-color;
 }
+
 .fretboard {
   margin-bottom: 10px;
   background: $fretboard-color;
@@ -89,6 +90,9 @@ label{
   display: inline-block;
   margin: .2em;
 }
+label:hover{
+  border:1px solid orange;
+}
 
 :checked + label{
  background-color: orange;
@@ -114,4 +118,10 @@ label{
     background: $fretbar-color;
     cursor: pointer;
   }
+}
+
+#chord_diagram_name{
+  width: 200px;
+  background: black;
+  color: $text-color;
 }
