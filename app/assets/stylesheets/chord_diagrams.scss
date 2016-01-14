@@ -27,9 +27,8 @@ h2{
   color: $text-color;
 }
 .fretboard {
-
   background: $fretboard-color;
-  width: 80%;
+  width: 900px;
   border-radius: 20px;
   min-width: 50%;
   margin: 5em auto 2em;
@@ -42,6 +41,24 @@ h2{
   }
 }
 
+@media screen and (max-width: 1200px){
+  .fretboard {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    max-width: 800px;
+    display:block;
+    margin-top: 20em;
+    margin-bottom: 25em;
+    float:left;
+  }
+  #main-container{
+    overflow: auto;
+    background: transparent;
+  }
+}
 
 .fret-row{
   float:left;
@@ -149,6 +166,8 @@ label:hover{
 img{
   border: 3px solid $fretboard-color;
   border-radius: 5px;
+  max-width: 80%;
+
 }
 
 #main-container{
