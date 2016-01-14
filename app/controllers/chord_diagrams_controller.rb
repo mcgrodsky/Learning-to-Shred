@@ -20,7 +20,10 @@ class ChordDiagramsController < ApplicationController
 
   # GET /chord_diagrams/1/edit
   def edit
-    @chord_diagrams = ChordDiagram.all
+    @chord_diagram = ChordDiagram.find(params[:id])
+    puts @chord_diagram.chords
+
+
   end
 
   # POST /chord_diagrams
