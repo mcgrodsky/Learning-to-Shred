@@ -11,7 +11,6 @@ $susy: (
   gutter-position: inside,
 );
 
-
 $string-color: #d59352;
 $fretboard-color: #333330;
 $fretbar-color: #A57164;
@@ -28,16 +27,16 @@ h2{
   color: $text-color;
 }
 .fretboard {
-  margin-bottom: 10px;
+
   background: $fretboard-color;
   width: 80%;
   border-radius: 20px;
   min-width: 50%;
-  margin: 0 auto;
+  margin: 5em auto 2em;
   border: 3px solid darken($background-color, 60%);
-  -webkit-box-shadow: -2px 0px 13px 5px rgba(194,163,107,1);
-  -moz-box-shadow: -2px 0px 13px 5px rgba(194,163,107,1);
-  box-shadow: -2px 0px 13px 5px rgba(194,163,107,1);
+  -webkit-box-shadow: -2px 0px 12px 2px rgba(194,163,107,1);
+  -moz-box-shadow: -2px 0px 12px 2px rgba(194,163,107,1);
+  box-shadow: -2px 0px 12px 2px rgba(194,163,107,1);
   input{
     display: none;
   }
@@ -71,14 +70,14 @@ h2{
 //refactor - add together
 .fret.dot {
   margin-top: 3px;
-  border-bottom: 3px dotted $text-color;
-  padding: 5px;
+  border-bottom: 2px dotted $text-color;
+
   // background-color: #eeeeee;
   }
 
 .fret.two-dots {
-  border-bottom: 3px dashed $text-color;
-  padding: 5px;
+  border-bottom: 2px dashed $text-color;
+
   // background-color: #dddddd;
 }
 
@@ -102,9 +101,21 @@ label:hover{
 
 }
 
-#selected{
-  display:none;
-}
+// #selected{
+//   display:none;
+// }
+
+
+  .sel-button{
+    background: orange;
+    border-radius: 10px;
+    padding: .5em;
+    margin: 1em;
+  }
+  .sel-button:hover{
+    cursor:pointer;
+  }
+
 
 .new-chord-form{
   text-align: center;
@@ -125,7 +136,7 @@ label:hover{
 }
 
 #chord_diagram_name{
-  width: 200px;
+  width: 250px;
   background: $fretboard-color;
   color: $text-color;
   height: 30px;
@@ -134,7 +145,7 @@ label:hover{
 }
 
 img{
-  border: 2px solid darken($background-color, 50%);
+  border: 3px solid $fretboard-color;
   border-radius: 5px;
 }
 
@@ -146,4 +157,15 @@ img{
   padding: 2em 0;
   padding-top: 5em;
   background: lighten($fretboard-color, 5%);
+}
+
+.edit-chord, .destroy-chord{
+  display:none;
+  color:white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.edit-chord:hover, .destroy-chord:hover{
+  text-decoration: unerline;
 }

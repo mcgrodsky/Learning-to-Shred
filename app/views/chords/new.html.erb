@@ -20,7 +20,7 @@
         <td><%= chord.notes %></td>
         <td><%= link_to 'Show', chord %></td>
         <td><%= link_to 'Edit', edit_chord_path(chord) %></td>
-        <td><%= link_to 'Destroy', chord, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', chord, method: :delete, data: { confirm: 'Do you really want to delete this chord?' } %></td>
       </tr>
     <% end %>
   </tbody>

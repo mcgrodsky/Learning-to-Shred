@@ -1,10 +1,4 @@
 <div id = "main-container">
-  <div class = "new-chord-form">
-    <h2>Name Your Chord</h2>
-    <%= render 'form' %>
-  </div>
-
-
   <div class=" fretboard">
       <ul class="fret-row">
         <div class="note estring">e</div>
@@ -15,28 +9,27 @@
         <div class="note EString">E</div>
       </ul>
   </div>
-</div>
-<button class = "clear-fretboard new-chord-form-button">Clear Fretboard</button>
 
-<table class = "column column-12 ">
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
+  <div class = "new-chord-form">
+    <h2>Name Your Chord</h2>
+    <%= render 'form' %>
+    <button class = "clear-fretboard new-chord-form-button">Clear Fretboard</button>
+    <button class = "show-edit new-chord-form-button">Edit Chords </button>
 
-  <tbody>
+  </div>
+
+<div class = "crud-buttons">
     <% @chord_diagrams.each do |chord_diagram| %>
       <tr>
-
         <td class = "user-sel-chord">
         <button class="sel-button" data-chord="<%= chord_diagram.chords.gsub(/[\s']/,'')%>"><%= chord_diagram.name %>
         </button>
         <!-- <%= chord_diagram.chords %></td> -->
         <!-- <td><%= link_to 'Show', chord_diagram %></td> -->
-        <td><%= link_to 'Edit', edit_chord_diagram_path(chord_diagram) %></td>
-        <td><%= link_to 'Destroy', chord_diagram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_chord_diagram_path(chord_diagram), class: "edit-chord" %></td>
+        <td><%= link_to 'Destroy', chord_diagram, class: "destroy-chord", method: :delete, data: { confirm: 'Do you really want to delete this chord?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+</div>
+
+</div>
