@@ -18,6 +18,7 @@ $nut-color: #FBF3D3;
 $shadow-color: #151515;
 $text-color: white;
 $background-color: #F5DeB3;
+$accent-orange: #FFA500;
 
 body{
   background: $background-color;
@@ -39,6 +40,9 @@ h2{
   input{
     display: none;
   }
+  .new-chord-form{
+    display:inline-block;
+  }
 }
 
 @media screen and (max-width: 1200px){
@@ -54,11 +58,34 @@ h2{
     margin-bottom: 25em;
     float:left;
   }
+  .new-chord-form{
+    display:inline-block;
+  }
+  .note{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
   #main-container{
     overflow: auto;
     background: transparent;
+    width: 500px;
   }
 }
+
+@media screen and (max-width: 900px){
+  .fretboard {
+    margin:20em 0;
+    width:800px;
+  }
+    #main-container{
+      overflow: auto;
+      background: transparent;
+    }
+}
+
 
 .fret-row{
   float:left;
@@ -73,14 +100,14 @@ h2{
 }
 .fret {
   display: inline-block;
-  border-right: 2px solid orange;
+  border-right: 2px solid $accent-orange;
   padding: 0 .2em;
 }
 .fret:hover {
   background-color: lighten($fretboard-color, 20%);
 }
 .fret[data-fret="0"] {
-  border-right: 5px solid orange;
+  border-right: 5px solid $accent-orange;
   background-color: $fretbar-color;
 }
 
@@ -110,11 +137,11 @@ label{
   margin: .2em;
 }
 label:hover{
-  border:1px solid orange;
+  border:2px solid $accent-orange;
 }
 
 :checked + label{
- background-color: orange;
+ background-color: $accent-orange;
 
 }
 
@@ -124,7 +151,7 @@ label:hover{
 
 
 .sel-button{
-    background: orange;
+    background: $accent-orange;
     border: 2px solid darken($fretboard-color, 10%);
     border-radius: 10px;
     padding: .5em;
@@ -138,6 +165,7 @@ label:hover{
 
 .new-chord-form{
   text-align: center;
+  margin: 0 auto;
 
   .new-chord-form-button{
     background: darken($fretbar-color, 20%);
