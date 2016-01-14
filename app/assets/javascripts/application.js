@@ -16,6 +16,7 @@
 
 $(document).ready(function() {
 
+
   var strings = ["e", "b", "G", "D", "A", "E"];
   var dots = [3, 5, 7, 9, 15, 17];
   var doubleDots = 12;
@@ -53,6 +54,7 @@ $(document).ready(function() {
     $('.fretboard').append($fret);
   }
 
+
   $(".sel-button").on('click', function(e) {
     e.preventDefault();
     // when a button is clicked, show which notes are pressed for that chord
@@ -65,6 +67,7 @@ $(document).ready(function() {
     }
     showSelected();
   });
+
 
   $(".fretboard").on('change', 'input', function(e) {
     // when an input is changed clear  notes selected, update  list of pressed notes, show updated list
@@ -94,6 +97,8 @@ $(document).ready(function() {
     $('#selected').val('');
   })
 
+
+
   function clearOthersInRow(selected) {
     // ensure that `selected` is the only note being pressed on this string
     var s = $(selected).attr('data-string');
@@ -103,9 +108,10 @@ $(document).ready(function() {
   // initialize selected notes
   showSelected();
 
-  $(".show-edit").on("click", function(){
-    $(".edit-chord").toggleClass("display", "inline");
-    $(".destroy-chord").css("display", "inline");
+  $('.show-edit').on("click", function(){
+    $('.toggle-edit-buttons').toggle();
   })
+
+
 
 });

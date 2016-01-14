@@ -18,6 +18,7 @@ $nut-color: #FBF3D3;
 $shadow-color: #151515;
 $text-color: white;
 $background-color: #F5DeB3;
+$accent-orange: #FFA500;
 
 body{
   background: $background-color;
@@ -27,9 +28,8 @@ h2{
   color: $text-color;
 }
 .fretboard {
-
   background: $fretboard-color;
-  width: 80%;
+  width: 900px;
   border-radius: 20px;
   min-width: 50%;
   margin: 5em auto 2em;
@@ -40,6 +40,50 @@ h2{
   input{
     display: none;
   }
+  .new-chord-form{
+    display:inline-block;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .fretboard {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    max-width: 800px;
+    display:block;
+    margin-top: 20em;
+    margin-bottom: 25em;
+    float:left;
+  }
+  .new-chord-form{
+    display:inline-block;
+  }
+  .note{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+  #main-container{
+    overflow: auto;
+    background: transparent;
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .fretboard {
+    margin:20em 0;
+    width:800px;
+  }
+    #main-container{
+      overflow: auto;
+      background: transparent;
+    }
 }
 
 
@@ -56,14 +100,14 @@ h2{
 }
 .fret {
   display: inline-block;
-  border-right: 2px solid orange;
+  border-right: 2px solid $accent-orange;
   padding: 0 .2em;
 }
 .fret:hover {
   background-color: lighten($fretboard-color, 20%);
 }
 .fret[data-fret="0"] {
-  border-right: 5px solid orange;
+  border-right: 5px solid $accent-orange;
   background-color: $fretbar-color;
 }
 
@@ -93,32 +137,35 @@ label{
   margin: .2em;
 }
 label:hover{
-  border:1px solid orange;
+  border:2px solid $accent-orange;
 }
 
 :checked + label{
- background-color: orange;
+ background-color: $accent-orange;
 
 }
 
-// #selected{
-//   display:none;
-// }
+#selected{
+  display:none;
+}
 
 
-  .sel-button{
-    background: orange;
+.sel-button{
+    background: $accent-orange;
+    border: 2px solid darken($fretboard-color, 10%);
     border-radius: 10px;
     padding: .5em;
     margin: 1em;
   }
-  .sel-button:hover{
+
+.sel-button:hover{
     cursor:pointer;
   }
 
 
 .new-chord-form{
   text-align: center;
+  margin: 0 auto;
 
   .new-chord-form-button{
     background: darken($fretbar-color, 20%);
@@ -147,6 +194,8 @@ label:hover{
 img{
   border: 3px solid $fretboard-color;
   border-radius: 5px;
+  max-width: 80%;
+
 }
 
 #main-container{
@@ -160,12 +209,11 @@ img{
 }
 
 .edit-chord, .destroy-chord{
-  display:none;
   color:white;
   text-decoration: none;
   font-size: 13px;
 }
 
-.edit-chord:hover, .destroy-chord:hover{
-  text-decoration: unerline;
+.toggle-edit-buttons{
+  display:none;
 }
