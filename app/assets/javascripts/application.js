@@ -103,9 +103,9 @@ $(document).ready(function() {
   // initialize selected notes
   showSelected();
 
-  $(".show-edit").on("click", function(){
-    $(".edit-chord").toggleClass("display", "inline");
-    $(".destroy-chord").css("display", "inline");
-  })
+$(".show-edit").on("click", function(){
+  $(".edit-chord").css("display", "inline");
+  $(".destroy-chord").css("display", "inline");
+})
 
 });
