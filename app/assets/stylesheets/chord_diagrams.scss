@@ -28,16 +28,16 @@ h2{
   color: $text-color;
 }
 .fretboard {
-  margin-bottom: 10px;
+
   background: $fretboard-color;
   width: 80%;
   border-radius: 20px;
   min-width: 50%;
-  margin: 0 auto;
+  margin: 5em auto 2em;
   border: 3px solid darken($background-color, 60%);
-  -webkit-box-shadow: -2px 0px 13px 5px rgba(194,163,107,1);
-  -moz-box-shadow: -2px 0px 13px 5px rgba(194,163,107,1);
-  box-shadow: -2px 0px 13px 5px rgba(194,163,107,1);
+  -webkit-box-shadow: -2px 0px 12px 2px rgba(194,163,107,1);
+  -moz-box-shadow: -2px 0px 12px 2px rgba(194,163,107,1);
+  box-shadow: -2px 0px 12px 2px rgba(194,163,107,1);
   input{
     display: none;
   }

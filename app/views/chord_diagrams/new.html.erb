@@ -1,10 +1,4 @@
 <div id = "main-container">
-  <div class = "new-chord-form">
-    <h2>Name Your Chord</h2>
-    <%= render 'form' %>
-  </div>
-
-
   <div class=" fretboard">
       <ul class="fret-row">
         <div class="note estring">e</div>
@@ -15,16 +9,16 @@
         <div class="note EString">E</div>
       </ul>
   </div>
-</div>
-<button class = "clear-fretboard new-chord-form-button">Clear Fretboard</button>
 
-<table class = "column column-12 ">
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
+  <div class = "new-chord-form">
+    <h2>Name Your Chord</h2>
+    <%= render 'form' %>
+    <button class = "clear-fretboard new-chord-form-button">Clear Fretboard</button>
 
+  </div>
+
+
+<table class = "">
   <tbody>
     <% @chord_diagrams.each do |chord_diagram| %>
       <tr>
@@ -40,3 +34,4 @@
     <% end %>
   </tbody>
 </table>
+</div>
