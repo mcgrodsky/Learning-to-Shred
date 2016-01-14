@@ -1,16 +1,17 @@
-<h2>Edit Chord Diagram</h2>
+<div id = "main-container">
+  <div class=" fretboard">
+      <ul class="fret-row">
+        <div class="note estring">e</div>
+        <div class="note Bstring">b</div>
+        <div class="note Gstring">G</div>
+        <div class="note Astring">D</div>
+        <div class="note Dstring">A</div>
+        <div class="note EString">E</div>
+      </ul>
+  </div>
 
-<%= render 'form' %>
-<button class = "clear-fretboard new-chord-form-button">Clear Fretboard</button>
-</div>
-<div class="fretboard">
-
-  <ul class="fret-row">
-    <div class="note estring">e</div>
-    <div class="note Bstring">b</div>
-    <div class="note Gstring">G</div>
-    <div class="note Astring">D</div>
-    <div class="note Dstring">A</div>
-    <div class="note EString">E</div>
-  </ul>
-</div>
+  <div class = "new-chord-form">
+    <h2>Update Your Chord</h2>
+    <%= render 'form' %>
+    <button class = "clear-fretboard new-chord-form-button">Clear Fretboard</button>
+  </div>

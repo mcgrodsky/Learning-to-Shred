@@ -25,7 +25,6 @@ $(document).ready(function() {
   for (var f = 0; f < frets; f++) {
     // create a new row that will represent this fret level
     var $fret = $("<div class='fret' data-fret='" + f + "'/>");
-
     for (i = 0; i < strings.length; i++) {
       // set id to strings[i]+fret num
       var id = strings[i] + f;
@@ -68,7 +67,7 @@ $(document).ready(function() {
   });
 
   $(".fretboard").on('change', 'input', function(e) {
-    // when an input is changed, clear the notes selected, update the list of pressed notes, and show the updated list
+    // when an input is changed clear  notes selected, update  list of pressed notes, show updated list
     e.preventDefault();
     clearOthersInRow(this);
     showSelected();
@@ -81,15 +80,19 @@ $(document).ready(function() {
   }
 
   function getSelected() {
-    // get the array of notes being pressed. array is ids of selected notes
-    //can use var sel to push into database perhaps?
-    //store the value of selected in this array, and save array to another array that creates a new instance?
+    // get the array of notes being pressed. array of ids of selected notes
     var sel = [];
     $('.fretboard input:checked').each(function() {
       sel.push($(this).attr('id'));
     });
     return sel;
   }
+
+  //clear fretboard and input values on click
+  $('.clear-fretboard').on("click", function() {
+    $('.fretboard input:checked').removeAttr('checked');
+    $('#selected').val('');
+  })
 
   function clearOthersInRow(selected) {
     // ensure that `selected` is the only note being pressed on this string
@@ -100,12 +103,11 @@ $(document).ready(function() {
   // initialize selected notes
   showSelected();
 
-  //clear fretboard and input values on click
-  $('.clear-fretboard').on("click", function() {
-    $('.fretboard input:checked').removeAttr('checked');
-    $('#selected').val('');
-  })
 
 
+$(".sel-button").on("click", function(){
+  $(".edit-chord").css("display", "inline");
+  $(".destroy-chord").css("display", "inline");
+})
 
 });

@@ -18,20 +18,18 @@
   </div>
 
 
-<table class = "">
-  <tbody>
+<div class = "crud-buttons">
     <% @chord_diagrams.each do |chord_diagram| %>
       <tr>
-
         <td class = "user-sel-chord">
         <button class="sel-button" data-chord="<%= chord_diagram.chords.gsub(/[\s']/,'')%>"><%= chord_diagram.name %>
         </button>
         <!-- <%= chord_diagram.chords %></td> -->
         <!-- <td><%= link_to 'Show', chord_diagram %></td> -->
-        <td><%= link_to 'Edit', edit_chord_diagram_path(chord_diagram) %></td>
-        <td><%= link_to 'Destroy', chord_diagram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_chord_diagram_path(chord_diagram), class: "edit-chord" %></td>
+        <td><%= link_to 'Destroy', chord_diagram, class: "destroy-chord", method: :delete, data: { confirm: 'Do you really want to delete this chord?' } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+</div>
+
 </div>

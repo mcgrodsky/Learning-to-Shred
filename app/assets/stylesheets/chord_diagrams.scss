@@ -71,14 +71,14 @@ h2{
 //refactor - add together
 .fret.dot {
   margin-top: 3px;
-  border-bottom: 3px dotted $text-color;
-  padding: 5px;
+  border-bottom: 2px dotted $text-color;
+
   // background-color: #eeeeee;
   }
 
 .fret.two-dots {
-  border-bottom: 3px dashed $text-color;
-  padding: 5px;
+  border-bottom: 2px dashed $text-color;
+
   // background-color: #dddddd;
 }
 
@@ -106,6 +106,12 @@ label:hover{
   display:none;
 }
 
+.user-sel-chord{
+  .sel-button{
+    background: white;
+  }
+}
+
 .new-chord-form{
   text-align: center;
 
@@ -125,7 +131,7 @@ label:hover{
 }
 
 #chord_diagram_name{
-  width: 200px;
+  width: 250px;
   background: $fretboard-color;
   color: $text-color;
   height: 30px;
@@ -146,4 +152,8 @@ img{
   padding: 2em 0;
   padding-top: 5em;
   background: lighten($fretboard-color, 5%);
+}
+
+.edit-chord, .destroy-chord{
+  display:none;
 }

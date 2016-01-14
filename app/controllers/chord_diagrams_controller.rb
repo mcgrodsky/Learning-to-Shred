@@ -20,6 +20,7 @@ class ChordDiagramsController < ApplicationController
 
   # GET /chord_diagrams/1/edit
   def edit
+    @chord_diagrams = ChordDiagram.all
   end
 
   # POST /chord_diagrams
