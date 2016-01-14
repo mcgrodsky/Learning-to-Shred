@@ -26,8 +26,10 @@
         </button>
         <!-- <%= chord_diagram.chords %></td> -->
         <!-- <td><%= link_to 'Show', chord_diagram %></td> -->
-        <td><%= link_to 'Edit', edit_chord_diagram_path(chord_diagram), class: "edit-chord" %></td>
-        <td><%= link_to 'Destroy', chord_diagram, class: "destroy-chord", method: :delete, data: { confirm: 'Do you really want to delete this chord?' } %></td>
+        <div class = "toggle-edit-buttons">
+          <td><%= link_to 'Edit', edit_chord_diagram_path(chord_diagram), class: "edit-chord" %></td>
+          <td><%= link_to 'Destroy', chord_diagram, class: "destroy-chord", method: :delete, data: { confirm: 'Do you really want to delete this chord?' } %></td>
+        </div>  
       </tr>
     <% end %>
 </div>
