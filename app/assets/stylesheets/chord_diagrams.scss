@@ -122,6 +122,9 @@ label:hover{
 
 #chord_diagram_name{
   width: 200px;
-  background: black;
+  background: $fretboard-color;
   color: $text-color;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
 }
