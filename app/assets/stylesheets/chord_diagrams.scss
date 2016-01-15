@@ -271,7 +271,12 @@ h3{
       color:#333;
       text-decoration: none;
       font-weight: bold;
+      text-decoration: underline;
     }
+}
+
+.h3-disguise{
+  color: $accent-orange;
 }
 
 #user-auth{
