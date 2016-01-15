@@ -21,7 +21,8 @@ $background-color: #F5DeB3;
 $accent-orange: #FFA500;
 
 body{
-  background: $background-color;
+  background: lighten($background-color, 10%);
+  margin:0;
 }
 
 h2{
@@ -43,33 +44,33 @@ h2{
 
 }
 
-@media screen and (max-width: 1200px){
-  .fretboard {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    max-width: 800px;
-    display:block;
-    margin-top: 20em;
-    margin-bottom: 25em;
-    float:left;
-  }
-
-  .note{
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-  #main-container{
-    overflow: auto;
-    background: transparent;
-    width: 100%;
-  }
-}
+// @media screen and (max-width: 1200px){
+//   .fretboard {
+//     -webkit-transform: rotate(90deg);
+//     -moz-transform: rotate(90deg);
+//     -o-transform: rotate(90deg);
+//     -ms-transform: rotate(90deg);
+//     transform: rotate(90deg);
+//     max-width: 800px;
+//     display:block;
+//     margin-top: 20em;
+//     margin-bottom: 25em;
+//     float:left;
+//   }
+//
+//   .note{
+//     -webkit-transform: rotate(-90deg);
+//     -moz-transform: rotate(-90deg);
+//     -o-transform: rotate(-90deg);
+//     -ms-transform: rotate(-90deg);
+//     transform: rotate(-90deg);
+//   }
+//   #main-container{
+//     overflow: auto;
+//     background: transparent;
+//     width: 100%;
+//   }
+// }
 
 @media screen and (max-width: 900px){
   .fretboard {
@@ -198,7 +199,7 @@ img{
 #main-container{
   border: 4px solid $fretboard-color;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 5em auto;
   width:80%;
   padding: 2em 0;
   padding-top: 5em;
@@ -213,4 +214,8 @@ img{
 
 .toggle-edit-buttons{
   display:none;
+}
+
+#user-auth{
+  background-color: lighten($accent-orange, 20%);
 }

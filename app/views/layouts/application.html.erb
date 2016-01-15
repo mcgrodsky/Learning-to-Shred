@@ -7,14 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id = "user-auth">
-    <% if current_user %>
-      <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
-    <% else %>
-      <h3><%= link_to 'Signup', new_user_registration_path %></h3>
-      <h3><%= link_to 'Login', new_user_session_path %></h3>
-</div>
-<% end %>
+
 <div class = "column column-12 logo">
   <%= image_tag("logo.jpg", :alt => "Betty") %>
 </div>
@@ -22,6 +15,14 @@
 
 
 <%= yield %>
+<div id = "user-auth">
+  <% if current_user %>
+    <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
+  <% else %>
+    <h3><%= link_to 'Signup', new_user_registration_path %> or</h3>
 
+    <h3><%= link_to 'Login', new_user_session_path %> to save chords to your profile!</h3>
+</div>
+<% end %>
 </body>
 </html>
