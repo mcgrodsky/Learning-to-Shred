@@ -3,7 +3,7 @@
 
 <a href = https://learning-to-shred.herokuapp.com/chord_diagrams/new /> Visit Demo </a>
 
-<h4> How to use this app  </h4>
+<h2> How to use this app  </h2>
 <ol>
   <li> Create your chord by selecting individual frets</li>
   <li>Name your chord</li>
@@ -16,11 +16,21 @@
 
 <h2> Technologies Used </h2>
   <ul>
+    <li> Ruby </li>
     <li>Ruby on Rails </li>
     <li>Javascript/jQuery </li>
     <li> HTML</li>
     <li> SASS</li>
     <li> Devise </li>
     <li> Susy </li>
+    <li> Git/Github </li>
+    <li> Heroku </li>
   </ul>
 
+<h2>Clone this repo. Then </h2>
+```
+$ bundle install
+$ rake db:create
+$ rake db:migrate
+$ figaro install
+```
