@@ -111,7 +111,9 @@ $(document).ready(function() {
   $('.show-edit').on("click", function(){
     $('.toggle-edit-buttons').toggle();
   })
-
+  $('.directions').on("click", function(){
+    console.log("?");
+  })
 
 
 });

@@ -1,4 +1,4 @@
-<%= form_for(@chord_diagram, :html => {:novalidate => 'novalidate'}) do |f| %>
+<%= form_for(@chord_diagram) do |f| %>
   <% if @chord_diagram.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@chord_diagram.errors.count, "error") %> prohibited this chord_diagram from being saved:</h2>
