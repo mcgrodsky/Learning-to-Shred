@@ -47,10 +47,6 @@ h2{
   input{
     display: none;
   }
-  img{
-    margin-top:2em;
-  }
-
 }
 
 @media screen and (max-width: 1200px){
@@ -78,6 +74,9 @@ h2{
     overflow: auto;
     background: transparent;
     width: 100%;
+  }
+  img{
+    margin-top:2em;
   }
 }
 
@@ -180,6 +179,7 @@ label:hover{
     color: $text-color;
     font-size: 20px;
     letter-spacing: 2px;
+    margin:5px;
   }
   .new-chord-form-button:hover{
     background: $fretbar-color;
@@ -194,6 +194,7 @@ label:hover{
   height: 30px;
   font-size: 20px;
   text-align: center;
+  margin-top: 10px;
 }
 
 img{
