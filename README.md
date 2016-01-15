@@ -3,13 +3,14 @@
 
 <a href = https://learning-to-shred.herokuapp.com/chord_diagrams/new /> Visit Demo </a>
 
-<ol> How to use this app 
+<h4> How to use this app  </h4>
+<ol>
   <li> Create your chord by selecting individual frets</li>
   <li>Name your chord</li>
   <li>Click “create chord diagram”</li>
   <li>SHRED!!</li>
-<p> Sign-up/Log-in to save chords to your profile </p>
 </ol>
+<p> Sign-up/Log-in to save chords to your profile </p>
 
 
 
